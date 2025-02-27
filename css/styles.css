@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+:root {
+  --color--text: white;
+  --border-color: 1px solid gray;
+  --border-radius: 5px;
+
+}
+
+body {
+  background-color: black;
+  color: var(--color--text);
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer"
+  ;
+}
+
+header {
+  grid-area: header;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  height: 350px;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "menu content";
+  grid-area: main;
+  grid-template-columns: 0.5fr 3fr;
+  width: 100%;
+}
+
+.menu {
+  grid-area: menu;
+  border: var(--border-color);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  background-color: black;
+  width: 100%;
+}
+
+.header_img {
+  height: 100%;
+  background-image: url("../img/picture.jpg");
+  background-size: cover;
+  background-position: right;
+  filter: blur(8px);
+}
+
+.header_text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  font-size: bold;
+}
+
+.menu h2 {
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 2px;
+  border: var(--border-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 5px;
+}
+
+.menu li {
+  border: var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 5px;
+  margin: 5px 2px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+
+.menu li:hover {
+  background-color: rgb(126, 126, 126);
+}
+
+.menu a {
+  display: block;
+  font-size: 18px;
+  color: var(--color--text);
+  text-decoration: none;
+  padding-left: 5px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.content {
+  grid-area: content;
+}
+
+.img-personal {
+  height: 200px;
+  width: 200px;
+  border-radius: var(--border-radius);
+}
+
+.description {
+  text-align: left;
+  margin: 30px;
+  border: var(--border-color);
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+.description p {
+  margin-left: 20px;
+}
+
+.card {
+  background-color: black;
+  color: white;
+  border: 1px solid gray;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin: 0px 5px 5px 10px;
+}
+
+.section_title {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.information {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+}
+
+.information ol {
+  margin-left: 30px;
+}
+
+.information li {
+  margin: 5px;
+  font-size: 16px;
+}
+
+.ul-info {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.div-skills {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.div-skills div {
+  width: 50%;
+  border: var(--border-color);
+  margin: 5px;
+  padding: 10px;
+}
+
+.div-skills ul {
+  list-style: none;
+}
+.div-skills ul {
+  margin: 5px;
+}
+
+.div-skills p {
+  margin: 0px 30px;
+}
+
+.div-disp {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-disp span {
+  margin: 30px 20px 10px 20px;
+}
+
+.note {
+  text-align: center;
+  background-color: red;
+  font-size: 0.8rem;
+}
+
+
+footer {
+  grid-area: footer;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
